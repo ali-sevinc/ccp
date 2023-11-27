@@ -1,5 +1,8 @@
 import Counter from "./Counter";
 import FormGroup from "./FormGroup";
+import Modal from "./Modal";
+import ModalShow from "./ModalShow";
+import ModalShow2 from "./ModalShow2";
 
 export default function App() {
   return (
@@ -46,6 +49,24 @@ export default function App() {
           </p>
         </FormGroup>
       </form>
+
+      <Modal>
+        <Modal.Open name="a-window">
+          <button>Modal window-1</button>
+        </Modal.Open>
+
+        <Modal.Body name="a-window">
+          <ModalShow />
+        </Modal.Body>
+
+        <Modal.Open name="another-window">
+          <button>Modal window-2</button>
+        </Modal.Open>
+
+        <Modal.Body name="another-window">
+          <ModalShow2 />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }
